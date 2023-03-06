@@ -11,4 +11,4 @@ class TestExaple:
         a = 5
         b = 11
        expected_sum
-    assert a + b == expected_sum, f"Sum of variables a and b is not equal to {expected_sum}"
+    assert a+b == expected_sum, f"Sum of variables a and b is not equal to {expected_sum}"
