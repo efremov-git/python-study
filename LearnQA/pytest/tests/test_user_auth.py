@@ -19,12 +19,12 @@ class TestUserAuth(BaseCase):
         self.token = self.get_header(response1, "x-csrf-token")
         self.user_id_from_auth_method = self.get_json_value(response1, "user_id")
 
-    def test_auth_user(self):
+   def test_auth_user(self):
 
     response2 = requests.get(
-    "https://playground.learnqa.ru/api/user/auth",
-    headers={"x-csrf-token" : self.token},
-    cookies={"auth_sid" : self.auth_sid}
+        "https://playground.learnqa.ru/api/user/auth",
+        headers={"x-csrf-token" : self.token},
+        cookies={"auth_sid" : self.auth_sid}
     )
 
     assert "user_id" in response2.json(), "There is no user id in the second response"
