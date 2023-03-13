@@ -5,7 +5,7 @@ import worker
 
 
 class TestWorker(unittest.TestCase):
-    def test_can_repeat (self):
+    def test_can_repeat(self):
         sleep_time = 7 * 60 * 60
         expected_result = False
 
