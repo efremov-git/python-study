@@ -19,8 +19,5 @@ button = browser.find_element(By.ID, "searchsubmit").click()
 check = browser.find_element(By.TAG_NAME, "h1").text
 check2 = "Капибара"
 
-if check == check2:
-    print("test passed")
-else:
-    print("test failed")
+assert check == check2, f"test failed {check}"
 browser.quit()
