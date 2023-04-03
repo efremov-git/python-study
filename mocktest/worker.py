@@ -1,5 +1,7 @@
 import time
 
+import requests
+
 
 class Worker:
     normal_sleep_time = 8 * 60 * 60
