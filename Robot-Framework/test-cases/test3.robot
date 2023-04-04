@@ -21,4 +21,6 @@ Test Case
     Login To Website    ${StandardUser}    ${Password}
     ${Title}=    get title
     log    Page title is:${Title}
+    ${Cookies}=    get cookie
+    log    ${Cookies}
     close browser
