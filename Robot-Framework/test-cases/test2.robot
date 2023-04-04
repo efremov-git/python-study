@@ -1,4 +1,4 @@
-#Test RobotFramework
+# Test RobotFramework
 *** Settings ***
 Library    SeleniumLibrary
 
@@ -7,7 +7,7 @@ ${URL}    https://thetestingworld.com/testings/
 ${Browser}    Chrome
 
 *** Test Cases ***
-First Test Case
+Test Case
     open browser    ${URL}   ${Browser}
     maximize browser window
     select radio button    add_type    office
