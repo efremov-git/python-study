@@ -1,4 +1,5 @@
-output.xml
-log.html
-report.html
-chromedriver.exe
+.idea
+test-cases\.output.xml
+test-cases\.log.html
+test-cases\.report.html
+test-cases\.chromedriver.exe
