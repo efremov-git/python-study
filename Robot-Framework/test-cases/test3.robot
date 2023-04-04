@@ -19,4 +19,6 @@ ${Password}    secret_sauce
 Test Case
     Open Browser and Maximize Browser Window    ${URL}    ${Browser}
     Login To Website    ${StandardUser}    ${Password}
+    ${Title}=    get title
+    log    Page title is:${Title}
     close browser
