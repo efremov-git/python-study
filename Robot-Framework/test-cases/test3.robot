@@ -2,18 +2,21 @@
 *** Settings ***
 Library    SeleniumLibrary
 Resource    ../resources/resources.robot
+#migration in resources
 
 *** Variables ***
 ${URL}    https://www.saucedemo.com/
 ${Browser}    Chrome
 
+
+# Users
+${StandardUser}    standard_user
+${LockedOutUser}    locked_out_user
+
+${Password}    secret_sauce
+
 *** Test Cases ***
 Test Case
     Open Browser and Maximize Browser Window    ${URL}    ${Browser}
-    input text    name:user-name    standard_user
-    input password    xpath:/html/body/div/div/div[2]/div[1]/div/div/form/div[2]/input    secret_sauce
-    click button    name:login-button
-    sleep    5
-    go back
-    sleep    3
+    Login To Website    ${StandardUser}    ${Password}
     close browser
