@@ -17,10 +17,13 @@ ${Password}    secret_sauce
 
 *** Test Cases ***
 Test Case
-    Open Browser and Maximize Browser Window    ${URL}    ${Browser}
+    [Setup]    Open Browser and Maximize Browser Window    ${URL}    ${Browser}
+    [Teardown]    close browser
     Login To Website    ${StandardUser}    ${Password}
     ${Title}=    get title
     log    Page title is:${Title}
-    ${Cookies}=    get cookie
+    ${Cookies}=    get cookies
     log    ${Cookies}
-    close browser
+    wait until element is visible     xpath://*[@id="page_wrapper"]/footer/ul/li[1]/a
+    scroll element into view    xpath://*[@id="page_wrapper"]/footer/ul/li[1]/a
+    capture page screenshot
