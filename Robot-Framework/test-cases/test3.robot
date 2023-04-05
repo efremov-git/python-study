@@ -22,8 +22,8 @@ Test Case
     Login To Website    ${StandardUser}    ${Password}
     ${Title}=    get title
     log    Page title is:${Title}
-    ${Cookies}=    get cookies
+    ${Cookies}=    get location
     log    ${Cookies}
-    wait until element is visible     xpath://*[@id="page_wrapper"]/footer/ul/li[1]/a
     scroll element into view    xpath://*[@id="page_wrapper"]/footer/ul/li[1]/a
+    set screenshot directory    ../screenshot
     capture page screenshot
