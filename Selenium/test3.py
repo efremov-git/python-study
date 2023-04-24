@@ -7,5 +7,3 @@ link ="http://joyreactor.cc/"
 browser = webdriver.Chrome()
 browser.maximize_window()
 browser.get(link)
-
-print "hello world"
